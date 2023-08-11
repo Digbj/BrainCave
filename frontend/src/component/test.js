@@ -32,13 +32,14 @@ const Test = () => {
 
   const SaveTask = async (userId) => {
     const userToUpdate = users.find((user) => user._id === userId);
-    if (!userToUpdate) return; // Handle if user is not found it wiill return
+     // Handle if user is not found it wiill return
+    if (!userToUpdate) return;
     
     try {
       const response = await fetch(`http://localhost:8000/users/${userId}`, {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ task: userToUpdate.editedTask }), // Use userToUpdate
+        body: JSON.stringify({ task: userToUpdate.editedTask }), 
       });
   
       if (!response.ok) {

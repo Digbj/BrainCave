@@ -7,6 +7,7 @@ import Home from './component/home';
 import UserContextProvider from './component/Context/userContext';
 import Demo from './component/demo';
 import Test from './component/test';
+import Footer from './component/footer';
 
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path='/test' element={<Test/>}/>
       
       </Routes>
+      <Footer/>
       </BrowserRouter>
       </UserContextProvider>
       

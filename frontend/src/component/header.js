@@ -43,7 +43,7 @@ const Header = () => {
 
   return (
     <div className="head">
-      <h2>Admin</h2>
+     <Link to='/'><h2 className="title">Admin</h2></Link> 
       <div className="btn">
         {user ? (
           <button onClick={logout}>Logout</button>
